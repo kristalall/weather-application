@@ -1,0 +1,56 @@
+h1 {
+  font-size: 30px;
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 40px;
+}
+#units {
+  font-size: 18px;
+  position: relative;
+  top: -15px;
+  font-weight: normal;
+}
+
+.container {
+  margin: 50px auto;
+  max-width: 80%;
+  border: 2px solid rgb(84, 82, 82);
+  padding: 10px 0;
+}
+
+.current-location {
+  font-size: 14px;
+}
+
+.date-time {
+  padding: 10px;
+}
+
+.city-selector {
+  padding: px;
+  line-height: 40px;
+  font-size: 15px;
+}
+
+.selector-searchbox {
+  box-shadow: -1px 1px 2px gray;
+}
+
+.thermometer {
+  border: 2px solid black;
+  max-width: 50px;
+  margin: 10px 10px 10px 50px;
+  text-align: right;
+  padding: 0;
+}
+
+.forecast-by-day {
+  color: rgb(84, 82, 82);
+  font-size: 20px;
+}
+
+.forecast {
+  margin: 10px auto;
+}
