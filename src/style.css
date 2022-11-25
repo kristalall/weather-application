@@ -14,7 +14,7 @@ h2 {
 }
 
 .container {
-  margin: 50px auto;
+  margin: 50px auto 0;
   max-width: 80%;
   border: 2px solid rgb(84, 82, 82);
   padding: 10px 0;
@@ -53,4 +53,10 @@ h2 {
 
 .forecast {
   margin: 10px auto;
+}
+
+#source-code-link {
+  margin: 0 auto;
+  max-width: 80%;
+  font-size: 14px;
 }
