@@ -1,5 +1,4 @@
 function showTemperature(response) {
-  console.log(response);
   h1.innerHTML = response.data.name;
   temperature.innerHTML = Math.round(response.data.main.temp);
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
