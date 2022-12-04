@@ -9,6 +9,10 @@ h2 {
   font-size: 45px;
   margin-bottom: 0;
 }
+h2 a {
+  text-decoration: none;
+}
+
 #units {
   font-size: 18px;
   position: relative;
@@ -57,6 +61,17 @@ h2 {
 
 .forecast {
   margin: 10px auto;
+}
+
+.active {
+  font-weight: bold;
+  color: #212529;
+  text-decoration: none;
+}
+
+.active:hover {
+  cursor: default;
+  color: #212529;
 }
 
 #source-code-link {
