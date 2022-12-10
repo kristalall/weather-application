@@ -50,6 +50,24 @@ function convertToCelsius() {
   temperature.innerHTML = Math.round(celsiusTemperature);
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  forecastHTML = `<div class = "row">`;
+  let days = ["Sun", "Mon", "Tues", "Wed", "Thurs"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col forecast-by-day"><div class="forecast-date">${day}</div><img
+            src="http://openweathermap.org/img/wn/50d@2x.png"
+            alt=""
+            width="46"
+          /><div class="forecast-temperature">84°</div></div>
+       `;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 let apiKey = "b141c9b5edc44b9a871e4ebe5549ac92";
 let unit = "imperial";
 let h1 = document.querySelector("h1");
@@ -95,3 +113,4 @@ let currentDate = document.querySelector("#current-day-time");
 currentDate.innerHTML = `${day} <br /> ${time}`;
 
 search("Houston");
+displayForecast();
