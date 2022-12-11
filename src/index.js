@@ -1,3 +1,9 @@
+function getForecast(coordinates) {
+  let apiKey = "b141c9b5edc44b9a871e4ebe5549ac92";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${coordinates.lat}&lon=${coordinates.lon}&units=imperial&appid=${apiKey}`;
+  axios.get(apiUrl).then(displayForecast);
+}
+
 function showTemperature(response) {
   h1.innerHTML = response.data.name;
   fahrenheitTemperature = response.data.main.temp;
@@ -13,6 +19,7 @@ function showTemperature(response) {
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
+  getForecast(response.data.coord);
 }
 
 function searchCity(event) {
@@ -50,7 +57,8 @@ function convertToCelsius() {
   temperature.innerHTML = Math.round(celsiusTemperature);
 }
 
-function displayForecast() {
+function displayForecast(response) {
+  console.log(response);
   let forecastElement = document.querySelector("#forecast");
   forecastHTML = `<div class = "row">`;
   let days = ["Sun", "Mon", "Tues", "Wed", "Thurs"];
@@ -113,4 +121,3 @@ let currentDate = document.querySelector("#current-day-time");
 currentDate.innerHTML = `${day} <br /> ${time}`;
 
 search("Houston");
-displayForecast();
