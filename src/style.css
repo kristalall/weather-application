@@ -32,10 +32,6 @@ h2 a {
   font-size: 14px;
 }
 
-#current-day-time {
-  font-size: 20px;
-}
-
 .date-time {
   padding: 10px;
 }
@@ -72,6 +68,11 @@ h2 a {
 .active:hover {
   cursor: default;
   color: #212529;
+}
+
+#current-day-time {
+  font-size: 20px;
+  color: #545252;
 }
 
 #source-code-link {
